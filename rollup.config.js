@@ -19,7 +19,6 @@ export default [
       commonjs(),
       postcss({
         modules: true,
-        extract: true,
         extensions: ['.scss'],
         plugins: [autoprefixer()],
         sourceMap: true,

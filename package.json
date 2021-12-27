@@ -8,7 +8,7 @@
   ],
   "types": "dist/index.d.ts",
   "scripts": {
-    "rollup": "rm -rf dist && rollup -c",
+    "build": "rimraf dist && rollup -c",
     "test": "jest",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
@@ -88,5 +88,6 @@
   "peerDependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
-  }
+  },
+  "dependencies": {}
 }
