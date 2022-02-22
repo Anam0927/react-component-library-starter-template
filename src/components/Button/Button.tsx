@@ -1,11 +1,10 @@
-import styles from './button.module.scss';
+import { FC } from 'react';
+import { default as MuiButton, type ButtonProps as MuiButtonProps } from '@mui/material/Button';
 
-export interface ButtonProps {
-  label: string;
-}
+export interface ButtonProps extends MuiButtonProps {}
 
-const Button = (props: ButtonProps) => {
-  return <button className={styles.button}>{props.label}</button>;
+const Button: FC<ButtonProps> = ({ children, ...rest }) => {
+  return <MuiButton {...rest}>{children}</MuiButton>;
 };
 
 export default Button;

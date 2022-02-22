@@ -1,5 +1,6 @@
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
+import replace from '@rollup/plugin-replace';
 import typescript from '@rollup/plugin-typescript';
 import autoprefixer from 'autoprefixer';
 import dts from 'rollup-plugin-dts';
@@ -14,6 +15,9 @@ export default [
     input: 'src/index.ts',
     output: [{ file: packageJson.module, format: 'esm', sourcemap: true }],
     plugins: [
+      replace({
+        'process.env.CDN_URL': JSON.stringify('https://tyke-assets.s3.amazonaws.com'),
+      }),
       peerDepsExternal(),
       resolve(),
       commonjs(),

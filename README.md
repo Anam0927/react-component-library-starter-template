@@ -1,2 +1,3 @@
-# react-component-library-starter-template
-A starter template to create a React component library using TypeScript, StoryBook, Jest and Rollup
+# Tyke UI Library
+
+This is the official UI library to be used in all Tyke projects.
